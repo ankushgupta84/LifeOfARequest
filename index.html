@@ -8,29 +8,21 @@
 <body>
 <title>The Life of a Request</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap">
 <style>
 /* Layout: a three-column reading desk. Chapters on the left, the story in the middle, the appendix on the right. */
 :root{
-  --bg:#f3f6f9; --panel:#ffffff; --ink:#15202c; --mut:#566575; --line:#d3dbe4;
-  --acc:#0a6f78; --acc-bg:#dff0f1; --pkt:#c2570c;
-  --ok:#1b7a3c; --warn:#9a5d00; --bad:#b3261e; --code:#e8edf2;
-  --disp:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
-  --body:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --bg:#0b0f0c; --panel:#101712; --ink:#cfe8d4; --mut:#7fa088; --line:#24402b;
+  --acc:#3ddc84; --acc-bg:#12301c; --pkt:#ffd166;
+  --ok:#3ddc84; --warn:#ffd166; --bad:#ff6b6b; --code:#0a120c;
+  --disp:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+  --body:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
   --mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
-  --hh:52px;
+  --hh:52px; color-scheme:dark;
 }
-@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
-  --bg:#0e141b; --panel:#151d26; --ink:#e2e8ee; --mut:#92a0af; --line:#293441;
-  --acc:#5cc8cf; --acc-bg:#12333a; --pkt:#f59e4b;
-  --ok:#5fca82; --warn:#e5b04f; --bad:#f2837a; --code:#1a232d; color-scheme:dark } }
-:root[data-theme="dark"]{
-  --bg:#0e141b; --panel:#151d26; --ink:#e2e8ee; --mut:#92a0af; --line:#293441;
-  --acc:#5cc8cf; --acc-bg:#12333a; --pkt:#f59e4b;
-  --ok:#5fca82; --warn:#e5b04f; --bad:#f2837a; --code:#1a232d; color-scheme:dark }
 
-*{box-sizing:border-box}
-body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.62}
+*{box-sizing:border-box;border-radius:0!important}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.62}
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:40;background:var(--panel)}
 a{color:var(--acc)}
 :focus-visible{outline:2px solid var(--acc);outline-offset:2px}
